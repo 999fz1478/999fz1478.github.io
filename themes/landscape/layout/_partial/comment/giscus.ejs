@@ -1,0 +1,33 @@
+<%
+const giscus = theme.giscus || {};
+const ready = giscus.repo && giscus.repo_id && giscus.category && giscus.category_id;
+%>
+<section id="comments" class="comments comments-giscus">
+  <div class="comments-heading">
+    <h3>评论区</h3>
+    <p>使用 GitHub Discussions 承载评论，适合长期沉淀和可追溯讨论。</p>
+  </div>
+  <% if (ready) { %>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="<%= giscus.repo %>"
+      data-repo-id="<%= giscus.repo_id %>"
+      data-category="<%= giscus.category %>"
+      data-category-id="<%= giscus.category_id %>"
+      data-mapping="<%= giscus.mapping || 'pathname' %>"
+      data-strict="<%= String(giscus.strict == null ? 0 : giscus.strict) %>"
+      data-reactions-enabled="<%= String(giscus.reactions_enabled == null ? 1 : giscus.reactions_enabled) %>"
+      data-emit-metadata="<%= String(giscus.emit_metadata == null ? 0 : giscus.emit_metadata) %>"
+      data-input-position="<%= giscus.input_position || 'top' %>"
+      data-theme="<%= giscus.theme || 'preferred_color_scheme' %>"
+      data-lang="<%= giscus.lang || 'zh-CN' %>"
+      data-loading="<%= giscus.loading || 'lazy' %>"
+      crossorigin="anonymous"
+      async>
+    </script>
+  <% } else { %>
+    <div class="comments-setup-note">
+      请先补全 `D:\\blog\\0630\\_config.landscape.yml` 里的 `giscus.repo_id` 和 `giscus.category_id`，评论区就会自动启用。
+    </div>
+  <% } %>
+</section>

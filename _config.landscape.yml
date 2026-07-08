@@ -1,0 +1,83 @@
+# ===============
+# Header
+# ===============
+menu:
+  Home: /
+  Archives: /archives
+
+rss: /atom.xml
+banner: "images/banner.jpg"
+subtitle: "把灵感、记录与日更内容沉淀成可回看的长期作品"
+
+links:
+#  github: https://github.com/your_github_account
+
+# ===============
+# Content
+# ===============
+excerpt_link: 继续阅读
+fancybox: true
+
+# ===============
+# Footer
+# ===============
+copyright: |-
+  记录持续发生的创作、笔记与项目。
+
+# ===============
+# Sidebar
+# ===============
+sidebar: right
+widgets:
+  - recent_posts
+  - category
+  - tagcloud
+  - archive
+
+# ===============
+# Widget behavior
+# ===============
+archive_type: 'monthly'
+show_count: true
+recent_posts_limits: 6
+
+# ===============
+# Miscellaneous
+# ===============
+google_analytics:
+gauges_analytics:
+favicon: /favicon.png
+twitter:
+fb_admins:
+fb_app_id:
+
+# ===============
+# Comment system
+# ===============
+disqus_shortname:
+valine:
+  enable: false
+  appId:
+  appKey:
+  notify: false
+  verify: false
+  pageSize: 10
+  avatar: mm
+  lang: zh-cn
+  placeholder: 留下你的看法
+  guest_info: nick,mail,link
+
+giscus:
+  enable: true
+  repo: 999fz1478/blog-comments
+  repo_id: R_kgDOTMdXuQ
+  category: Announcements
+  category_id: DIC_kwDOTMdXuc4DAar9
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  lang: zh-CN
+  loading: lazy
